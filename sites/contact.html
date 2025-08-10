@@ -53,6 +53,66 @@
     </nav>
 
     <div class="container my-5">
+    <h2 class="mb-4">Kontaktieren Sie uns</h2>
+    <form id="contactForm">
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">E-Mail</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Telefonnummer</label>
+            <input type="phone" class="form-control" id="phone" name="phone">
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Nachricht</label>
+            <textarea class="form-control" id="message" name="message" rows="7" required></textarea>
+        </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="privacy" name="privacy" required>
+            <label class="form-check-label" for="privacy">
+                Ich habe die <a href="datenschutz.html" target="_blank">Datenschutzbestimmungen</a> gelesen und stimme zu.
+            </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Absenden</button>
+    </form>
+</div>
+
+<!-- EmailJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+(function(){
+    emailjs.init("DEIN_PUBLIC_KEY"); // <-- HIER deinen Public Key eintragen
+})();
+
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    if (!document.getElementById('privacy').checked) {
+        alert('Bitte stimmen Sie den Datenschutzbestimmungen zu.');
+        return;
+    }
+
+    emailjs.send("DEIN_SERVICE_ID", "DEIN_TEMPLATE_ID", {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+    }).then(function() {
+        alert('Nachricht erfolgreich gesendet!');
+        document.getElementById('contactForm').reset();
+    }, function(error) {
+        alert('Fehler beim Senden: ' + JSON.stringify(error));
+    });
+});
+</script>
+
+
+
+<!--
+    <div class="container my-5">
             <h2 class="mb-4">Kontaktieren Sie uns</h2>
             <form>
                 <div class="mb-3">
@@ -70,6 +130,7 @@
                 <button type="submit" class="btn btn-primary">Absenden</button>
             </form>
     </div>
+-->
 
     <!-- Footer-->
     <footer class="bg-light py-4 mt-auto">
