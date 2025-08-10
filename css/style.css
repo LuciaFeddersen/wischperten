@@ -1,0 +1,257 @@
+/*
+farben: 
+heller=   #9DD3D0
+dunkler=  #69A6A9
+schrift= #30585C
+*/
+
+body {
+    min-height: 50rem;
+    padding-top: 4.5rem;
+    height: 100%;
+    color: #30585C ;
+}
+
+/* nav */
+
+.logoheader {
+  width: 80px; /* feste Größe für einheitliches Layout */
+  height: auto;
+}
+
+.nav-link {
+  color: #69A6A9;
+}
+
+.nav-link:hover,
+.dropdown-item:hover {
+  color: #30585C;
+}
+
+.active {
+  color: #30585C !important;
+}
+
+/* Dropdown on hover in Desktop */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}
+
+/* Dropdown style */
+.dropdown-menu {
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+.dropdown-item {
+  color: #30585C;
+}
+
+.dropdown-item:hover {
+  background-color: #9DD3D0;
+  color: #30585C;
+}
+
+
+/* home header*/
+
+.contactbutton {
+    background-color: #69A6A9;
+    border: none;
+}
+
+.contactbutton:hover {
+  background-color: #30585C;
+}
+
+.text-gradient {
+  background: -webkit-linear-gradient(315deg, #69A6A9 0%, #30585C 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.profile {
+  position: relative;
+  height: 75vw;
+  width: 75vw;
+  border-radius: 5vw;
+  margin-top: 5vw;
+  max-height: 40rem;
+  max-width: 40rem;
+}
+.profile .profile-img {
+  height: 80vw;
+  max-height: 45rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: 576px) {
+  .profile {
+    height: 60vw;
+    width: 60vw;
+  }
+  .profile .profile-img {
+    height: 65vw;
+  }
+}
+@media (min-width: 768px) {
+  .profile {
+    height: 50vw;
+    width: 50vw;
+  }
+  .profile .profile-img {
+    height: 55vw;
+  }
+}
+@media (min-width: 992px) {
+  .profile {
+    height: 40vw;
+    width: 40vw;
+  }
+  .profile .profile-img {
+    height: 45vw;
+  }
+}
+@media (min-width: 1200px) {
+  .profile {
+    height: 35vw;
+    width: 35vw;
+  }
+  .profile .profile-img {
+    height: 40vw;
+  }
+}
+
+/* home about*/
+
+.about {
+  background-color: #30585C;
+}
+
+.page-section {
+  padding: 6rem 0;
+}
+
+.text-white-75 {
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+.btn-xl {
+  padding: 1.25rem 2.25rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10rem;
+}
+
+/* home service */
+
+hr.divider {
+  height: 0.2rem;
+  max-width: 3.25rem;
+  margin: 1.5rem auto;
+  background-color: #69A6A9;
+  opacity: 1;
+  border: none;
+}
+
+hr.divider-light {
+  background-color: #fff;
+}
+
+/* home portfolio */
+.page-section2 {
+  padding: 4rem 0;
+}
+
+#portfolio .container-fluid, #portfolio .container-sm, #portfolio .container-md, #portfolio .container-lg, #portfolio .container-xl, #portfolio .container-xxl {
+  max-width: 1920px;
+}
+#portfolio .container-fluid .portfolio-box, #portfolio .container-sm .portfolio-box, #portfolio .container-md .portfolio-box, #portfolio .container-lg .portfolio-box, #portfolio .container-xl .portfolio-box, #portfolio .container-xxl .portfolio-box {
+  position: relative;
+  display: block;
+}
+#portfolio .container-fluid .portfolio-box .portfolio-box-caption, #portfolio .container-sm .portfolio-box .portfolio-box-caption, #portfolio .container-md .portfolio-box .portfolio-box-caption, #portfolio .container-lg .portfolio-box .portfolio-box-caption, #portfolio .container-xl .portfolio-box .portfolio-box-caption, #portfolio .container-xxl .portfolio-box .portfolio-box-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  opacity: 0;
+  color: #30585C;
+  background: rgba(157, 211, 208, 0.9);
+  transition: opacity 0.25s ease;
+  text-align: center;
+}
+#portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-sm .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-md .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-lg .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-xl .portfolio-box .portfolio-box-caption .project-category, #portfolio .container-xxl .portfolio-box .portfolio-box-caption .project-category {
+  font-family: "Merriweather Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 0.85rem; 
+  font-weight: 600;
+  text-transform: uppercase;
+}
+#portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-sm .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-md .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-lg .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-xl .portfolio-box .portfolio-box-caption .project-name, #portfolio .container-xxl .portfolio-box .portfolio-box-caption .project-name {
+  font-size: 1.2rem;
+}
+#portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption, #portfolio .container-sm .portfolio-box:hover .portfolio-box-caption, #portfolio .container-md .portfolio-box:hover .portfolio-box-caption, #portfolio .container-lg .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xl .portfolio-box:hover .portfolio-box-caption, #portfolio .container-xxl .portfolio-box:hover .portfolio-box-caption {
+  opacity: 1;
+}
+
+#portfolio .portfolio-box img {
+  width: 100%;
+  height: 250px; /* Standardhöhe für große Bildschirme */
+  object-fit: cover; /* Bild füllt Rahmen ohne Verzerrung */
+  display: block;
+}
+
+@media (max-width: 1200px) {
+  #portfolio .portfolio-box img {
+    height: 230px; /* etwas kleiner auf Laptops */
+  }
+}
+
+@media (max-width: 992px) {
+  #portfolio .portfolio-box img {
+    height: 220px; /* Tablets quer */
+  }
+}
+
+@media (max-width: 768px) {
+  #portfolio .portfolio-box img {
+    height: 200px; /* Tablets hochkant */
+  }
+}
+
+@media (max-width: 576px) {
+  #portfolio .portfolio-box img {
+    height: 180px; /* Smartphones */
+  }
+}
+
+/* service sites */
+.headerServiceSite {
+  background-color: #30585C;
+}
+
+.closing-message {
+  background-color: #d4efef; /* zartes Türkis */
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 8px rgba(48, 88, 92, 0.1);
+}
+
+.highlight-text {
+  color: #69A6A9;
+  font-weight: 600;
+}
+
+.closing-message p {
+  line-height: 1.6;
+}
