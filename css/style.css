@@ -5,6 +5,20 @@ dunkler=  #69A6A9
 schrift= #30585C
 */
 
+* {
+  max-width: 100%;
+  /*
+  overflow: hidden;
+  width: 100%;
+  
+  box-sizing: border-box;
+  clear: both;
+  
+  */
+  
+}
+ 
+
 body {
     min-height: 50rem;
     padding-top: 4.5rem;
@@ -87,6 +101,7 @@ body {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  max-width: 150% !important;
 }
 
 @media (min-width: 576px) {
