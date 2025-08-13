@@ -261,3 +261,50 @@ hr.divider-light {
 .closing-message p {
   line-height: 1.6;
 }
+
+/* subcontector */
+.subcontractor {
+    header {
+      background-color: #004d4d;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    .highlight {
+      background-color: #f5f5f5;
+    }
+    h2 {
+      color: #004d4d;
+    }
+    .test ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    .test ul li::before {
+      content: "✔️ ";
+      color: #009999;
+    }
+    .cta {
+      text-align: center;
+      margin-top: 30px;
+    }
+    .cta a {
+      background-color: #004d4d;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+    .cta a:hover {
+      background-color: #009999;
+    }
+
+}

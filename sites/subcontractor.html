@@ -2,7 +2,7 @@
 <html lang="de">
 <head>
     <title>wischperten-servicegroup</title>
-    <link rel="icon"  href="../assets/logo.png" />
+    <link rel="icon"  href="assets/logo.png" />
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 
 </head>
-<body>
+<body class="subcontractor">
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top">
         <div class="container-fluid">
@@ -45,95 +45,54 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Kontakt</a>
+                        <a class="nav-link" href="contact.html">Kontakt</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="sites/subcontractor.html">Nachunternehmer</a>
+                        <a class="nav-link active" href="sites/subcontractor.html">Nachunternehmer</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div class="container my-5">
-    <h2 class="mb-4">Kontaktieren Sie uns</h2>
-    <form id="contactForm">
-        <div class="mb-3">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" name="name" required>
-        </div>
-        <div class="mb-3">
-            <label for="email" class="form-label">E-Mail</label>
-            <input type="email" class="form-control" id="email" name="email" required>
-        </div>
-        <div class="mb-3">
-            <label for="phone" class="form-label">Telefonnummer</label>
-            <input type="phone" class="form-control" id="phone" name="phone">
-        </div>
-        <div class="mb-3">
-            <label for="message" class="form-label">Nachricht</label>
-            <textarea class="form-control" id="message" name="message" rows="7" required></textarea>
-        </div>
-        <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="privacy" name="privacy" required>
-            <label class="form-check-label" for="privacy">
-                Ich habe die <a href="datenschutz.html" target="_blank">Datenschutzbestimmungen</a> gelesen und stimme zu.
-            </label>
-        </div>
-        <button type="submit" class="btn btn-primary">Absenden</button>
-    </form>
-</div>
+    <header>
+  <h1>Nachunternehmermanagement</h1>
+  <p>Gemeinsam für ein Ziel – erfolgreiche und langfristige Partnerschaften</p>
+</header>
 
-<!-- EmailJS Script -->
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-(function(){
-    emailjs.init("DEIN_PUBLIC_KEY"); // <-- HIER deinen Public Key eintragen
-})();
+<section>
+  <h2>Partnerschaft mit der Wischperten Service Group</h2>
+  <p>Wir setzen auf langfristige und vertrauensvolle Geschäftsbeziehungen mit unseren Nachunternehmern und Dienstleistern. Unser Ziel ist es, gemeinsam hochwertige Dienstleistungen zu erbringen – zuverlässig, rechtssicher und partnerschaftlich.</p>
+</section>
 
-document.getElementById('contactForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+<section class="highlight">
+  <h2>Ihr Weg zur Partnerschaft</h2>
+  <p>Nutzen Sie unser Bewerbungsformular für Nachunternehmer. Dort führen wir Sie Schritt für Schritt durch alle relevanten Informationen und Anforderungen für eine erfolgreiche Zusammenarbeit.</p>
+  <p>Nach der Übermittlung Ihrer Daten werden diese direkt in unserer Datenbank hinterlegt. Im Falle eines konkreten Auftrags nehmen wir persönlich Kontakt mit Ihnen auf, um die Qualifizierung und weitere Details individuell abzustimmen.</p>
+</section>
 
-    if (!document.getElementById('privacy').checked) {
-        alert('Bitte stimmen Sie den Datenschutzbestimmungen zu.');
-        return;
-    }
+<section>
+  <h2>Qualifizierungsanforderungen</h2>
+  <ul>
+    <li class="test">Gewerbeanmeldung oder Handelsregisterauszug</li>
+    <li class="test">Unbedenklichkeitsbescheinigung der Krankenkasse</li>
+    <li class="test">Nachweis über eine gültige Betriebshaftpflichtversicherung</li>
+    <li class="test">Freistellungsbescheinigung des Finanzamtes gemäß § 48b EStG (optional bei Bauleistungen)</li>
+  </ul>
 
-    emailjs.send("DEIN_SERVICE_ID", "DEIN_TEMPLATE_ID", {
-        name: document.getElementById('name').value,
-        email: document.getElementById('email').value,
-        message: document.getElementById('message').value
-    }).then(function() {
-        alert('Nachricht erfolgreich gesendet!');
-        document.getElementById('contactForm').reset();
-    }, function(error) {
-        alert('Fehler beim Senden: ' + JSON.stringify(error));
-    });
-});
-</script>
+  <h3>Branchenspezifische Zusatzdokumente</h3>
+  <ul>
+    <li>Zertifikat Entsorgungsfachbetrieb</li>
+    <li>Genehmigung zur gewerbsmäßigen Arbeitnehmerüberlassung</li>
+  </ul>
+</section>
 
+<section class="cta">
+  <h2>Jetzt Partner werden!</h2>
+  <p>Starten Sie Ihre Bewerbung direkt über unser Formular und werden Sie Teil eines starken Netzwerks.</p>
+  <a href="#">Jetzt bewerben</a>
+</section>
 
-
-<!--
-    <div class="container my-5">
-            <h2 class="mb-4">Kontaktieren Sie uns</h2>
-            <form>
-                <div class="mb-3">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" class="form-control" id="name" required>
-                </div>
-                <div class="mb-3">
-                    <label for="email" class="form-label">E-Mail</label>
-                    <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="mb-3">
-                    <label for="message" class="form-label">Nachricht</label>
-                    <textarea class="form-control" id="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn btn-primary">Absenden</button>
-            </form>
-    </div>
--->
 
     <!-- Footer-->
     <footer class="bg-light py-4 mt-auto">
