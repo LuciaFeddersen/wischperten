@@ -58,6 +58,18 @@ body {
   color: #30585C;
 }
 
+.dropdown-menu {
+    min-width: max-content; 
+    white-space: nowrap;    
+    padding: 0.5rem 0; 
+}
+
+@media (max-width: 991px) {
+    .dropdown-menu {
+        min-width: 100%;
+        white-space: normal;
+    }
+}
 
 /* home header*/
 
@@ -76,61 +88,44 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
-.profile {
-  position: relative;
-  height: 75vw;
-  width: 75vw;
-  border-radius: 5vw;
-  margin-top: 5vw;
-  max-height: 40rem;
-  max-width: 40rem;
-}
-.profile .profile-img {
-  height: 80vw;
-  max-height: 45rem;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 150% !important;
+.fullscreen-header {
+    height: 100vh;
+    display: flex;
+    align-items: center;
 }
 
-@media (min-width: 576px) {
-  .profile {
-    height: 60vw;
-    width: 60vw;
-  }
-  .profile .profile-img {
-    height: 65vw;
-  }
+.profile {
+    max-width: 300px;
+    margin: 0 auto;
 }
+
+.profile-img {
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+/* Tablet quer */
 @media (min-width: 768px) {
-  .profile {
-    height: 50vw;
-    width: 50vw;
-  }
-  .profile .profile-img {
-    height: 55vw;
-  }
+    .profile {
+        max-width: 400px;
+    }
 }
-@media (min-width: 992px) {
-  .profile {
-    height: 40vw;
-    width: 40vw;
-  }
-  .profile .profile-img {
-    height: 45vw;
-  }
-}
+
+/* Desktop */
 @media (min-width: 1200px) {
-  .profile {
-    height: 35vw;
-    width: 35vw;
-  }
-  .profile .profile-img {
-    height: 37vw;
-  }
+    .profile {
+        max-width: 500px;
+    }
 }
+
+/* Sehr große Monitore */
+@media (min-width: 1600px) {
+    .profile {
+        max-width: 600px;
+    }
+}
+
 
 /* home about*/
 
