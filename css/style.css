@@ -304,7 +304,7 @@ hr.divider-light {
 
 }
 
-.about {
+.aboutpage {
   background-color: white;
     header {
       background-color: #004d4d;
@@ -319,7 +319,7 @@ hr.divider-light {
     section {
       padding: 40px 20px;
     }
-    
+
     }
     .highlight {
       background-color: #f5f5f5;
