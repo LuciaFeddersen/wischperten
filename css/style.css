@@ -303,3 +303,46 @@ hr.divider-light {
     }
 
 }
+
+.about {
+  background-color: white;
+    header {
+      background-color: #004d4d;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2em;
+    }
+    section {
+      padding: 40px 20px;
+    }
+    
+    }
+    .highlight {
+      background-color: #f5f5f5;
+    }
+    h2 {
+      color: #004d4d;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li::before {
+      color: #009999;
+    }
+    .cta {
+      text-align: center;
+      background-color: #004d4d;
+      color: white;
+      padding: 40px 20px;
+      border-radius: 5px;
+
+      h2 {
+      color: white;
+      }
+    }
+}
