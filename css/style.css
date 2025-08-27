@@ -9,12 +9,11 @@ schrift= #30585C
   max-width: 100%;
 }
  
-
 body {
     min-height: 50rem;
     padding-top: 4.5rem;
     height: 100%;
-    color: #30585C ;
+    color: #30585C;
 }
 
 /* nav */
@@ -278,11 +277,11 @@ hr.divider-light {
     h2 {
       color: #004d4d;
     }
-    .test ul {
+    .listsubcontractor ul {
       list-style: none;
       padding-left: 0;
     }
-    .test ul li::before {
+    .listsubcontractor ul li::before {
       content: "✔️ ";
       color: #009999;
     }
@@ -306,6 +305,51 @@ hr.divider-light {
 
 .aboutpage {
   background-color: white;
+  header {
+    background-color: #004d4d;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+  }
+  section {
+    padding: 40px 20px;
+  }
+  .special {
+    background-color: white;
+    color: #30585C !important;
+  }
+  .highlight {
+    background-color: #f5f5f5;
+  }
+  h2 {
+    color: #004d4d;
+  }
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  ul li::before {
+    color: #009999;
+  }
+  .cta {
+    text-align: center;
+    background-color: #004d4d;
+    color: white;
+    padding: 40px 20px;
+    border-radius: 5px;
+
+    h2 {
+    color: white;
+    }
+  }
+}
+
+.career {
+  background-color: white;
     header {
       background-color: #004d4d;
       color: white;
@@ -328,8 +372,8 @@ hr.divider-light {
       color: #004d4d;
     }
     ul {
-      list-style: none;
-      padding-left: 0;
+      padding-left: 35px;
+      list-style-type: square;
     }
     ul li::before {
       color: #009999;
@@ -344,5 +388,4 @@ hr.divider-light {
       h2 {
       color: white;
       }
-    }
-}
+  }
