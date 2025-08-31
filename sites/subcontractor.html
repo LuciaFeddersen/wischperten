@@ -10,6 +10,42 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 
+        <style>
+      /* Formular-spezifische Styles */
+      .form-container {
+        background-color: #ffffff;
+        border-radius: 15px;
+        padding: 30px;
+        max-width: 900px;
+        margin: 0 auto 50px auto;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+      }
+      .btn-primary {
+        background-color: #69A6A9;
+        border-color: #69A6A9;
+        transition: 0.3s;
+      }
+      .btn-primary:hover {
+        background-color: #30585C;
+        border-color: #30585C;
+      }
+      label {
+        font-weight: 600;
+        color: #30585C;
+      }
+      .form-control:focus {
+        border-color: #69A6A9;
+        box-shadow: 0 0 5px rgba(105, 166, 169, 0.5);
+      }
+      @media (max-width: 768px) {
+        .form-container {
+          padding: 20px;
+        }
+      }
+      .form-check .form-check-input {
+        float: none;
+      }
+    </style>
 </head>
 <body class="subcontractor">
     <!-- Navigation -->
@@ -82,12 +118,48 @@
   </ul>
 </section>
 
-<section class="cta">
-    <h2>Jetzt Partner werden!</h2>
-    <p>Senden sie uns direkt eine E-mail und werden Sie Teil eines starken Netzwerks.</p>
-    <p>Email an wischperten@web.de</p>
-</section>
+ <!-- Formular -->
+    <section class="cta">
+      <h2>Jetzt Partner werden!</h2>
+      <p>Nutzen Sie einfach das folgende Formular und werden Sie Teil eines starken Netzwerks.</p>
 
+      <div class="form-container mt-4">
+        <form id="subForm" novalidate>
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label for="firma" class="form-label">Firma *</label>
+              <input type="text" class="form-control" id="firma" name="firma" required>
+            </div>
+            <div class="col-md-6">
+              <label for="ansprechpartner" class="form-label">Ansprechpartner *</label>
+              <input type="text" class="form-control" id="ansprechpartner" name="ansprechpartner" required>
+            </div>
+            <div class="col-md-6">
+              <label for="telefon" class="form-label">Telefon *</label>
+              <input type="tel" class="form-control" id="telefon" name="telefon" required>
+            </div>
+            <div class="col-md-6">
+              <label for="email" class="form-label">E-Mail *</label>
+              <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="col-12">
+              <label for="leistungen" class="form-label">Referenzen *</label>
+              <textarea class="form-control" id="leistungen" name="leistungen" rows="4" required></textarea>
+            </div>
+            <div class="col-12 form-check">
+              <input type="checkbox" class="form-check-input" id="datenschutz" name="datenschutz" required>
+              <label class="form-check-label" for="datenschutz">
+                Ich akzeptiere die <a href="datenschutz.html" class="small text-decoration-none">Datenschutzbestimmungen</a>.
+              </label>
+            </div>
+            <div class="col-12 text-center">
+              <button type="submit" id="btnSubmit" class="btn btn-primary mt-3">Absenden</button>
+            </div>
+          </div>
+        </form>
+        <div id="status" class="mt-3 text-center"></div>
+      </div>
+    </section>
 
     <!-- Footer-->
     <footer class="bg-light py-4 mt-auto">
@@ -104,5 +176,68 @@
             </div>
         </div>
     </footer>
+
+
+    <!-- EmailJS Script am Ende laden -->
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+    (function(){
+        emailjs.init({
+            publicKey: "Z4hQx0VMxbbwU4aS3",
+        });
+    })();
+    </script>
+  <script>
+
+    const form = document.getElementById('auftragForm');
+    const btn = document.getElementById('btnSubmit');
+    const statusDiv = document.getElementById('status');
+
+    form.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        form.classList.add('was-validated');
+        statusDiv.innerHTML = '<div class="alert alert-danger">Bitte füllen Sie alle Pflichtfelder aus.</div>';
+        return;
+      }
+
+      btn.innerText = 'Sending...';
+
+      const templateParams = {
+        auftragsart: document.getElementById('auftragsart').value,
+        reinigungsflaeche: document.getElementById('reinigungsflaeche').value,
+        stockwerk: document.getElementById('stockwerk').value,
+        wannErreichen: document.getElementById('wannErreichen').value,
+        firma: document.getElementById('firma').value,
+        ansprechpartner: document.getElementById('ansprechpartner').value,
+        adresse: document.getElementById('adresse').value,
+        plz: document.getElementById('plz').value,
+        telefon: document.getElementById('telefon').value,
+        email: document.getElementById('email').value,
+        nachricht: document.getElementById('nachricht').value
+      };
+
+      const serviceID = 'service_c9oy6ke'; // <--- hier ersetzen
+      const templateID = 'template_hm18taw'; // <--- hier ersetzen
+
+      emailjs.send(serviceID, templateID, templateParams)
+        .then(() => {
+            btn.innerText = 'Absenden';
+            statusDiv.innerHTML = '<div class="alert alert-success">Anfrage erfolgreich gesendet!</div>';
+            form.reset();
+
+            form.reset();
+            form.classList.remove('was-validated');
+        }, (err) => {
+            btn.innerText = 'Absenden';
+            statusDiv.innerHTML = '<div class="alert alert-danger">Fehler beim Senden der Anfrage.</div>';
+            console.error(err);
+            });
+        });
+  </script>
+
 </body>
 </html>

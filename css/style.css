@@ -289,17 +289,6 @@ hr.divider-light {
       text-align: center;
       margin-top: 30px;
     }
-    .cta a {
-      background-color: #004d4d;
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 5px;
-      font-weight: bold;
-    }
-    .cta a:hover {
-      background-color: #009999;
-    }
 
 }
 

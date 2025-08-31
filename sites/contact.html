@@ -91,7 +91,7 @@
     <form id="auftragForm" novalidate>
       <div class="row g-3">
         <div class="col-md-6">
-          <label for="auftragsart" class="form-label">Auftragsart</label>
+          <label for="auftragsart" class="form-label">Auftragsart *</label>
           <select class="form-select" id="auftragsart" name="auftragsart" required>
             <option value="">Bitte wählen...</option>
             <option value="Kita- &amp; Schulreinigung">Kita- &amp; Schulreinigung</option>
@@ -106,7 +106,7 @@
           </select>
         </div>
         <div class="col-md-6">
-          <label for="reinigungsflaeche" class="form-label">Reinigungsfläche</label>
+          <label for="reinigungsflaeche" class="form-label">Reinigungsfläche *</label>
           <input type="text" class="form-control" id="reinigungsflaeche" name="reinigungsflaeche" required>
         </div>
         <div class="col-md-6">
@@ -118,27 +118,27 @@
           <input type="text" class="form-control" id="wannErreichen" name="wannErreichen">
         </div>
         <div class="col-md-6">
-          <label for="firma" class="form-label">Firma</label>
+          <label for="firma" class="form-label">Firma *</label>
           <input type="text" class="form-control" id="firma" name="firma" required>
         </div>
         <div class="col-md-6">
-          <label for="ansprechpartner" class="form-label">Ansprechpartner</label>
+          <label for="ansprechpartner" class="form-label">Ansprechpartner *</label>
           <input type="text" class="form-control" id="ansprechpartner" name="ansprechpartner" required>
         </div>
         <div class="col-md-6">
-          <label for="adresse" class="form-label">Straße &amp; Hausnummer</label>
+          <label for="adresse" class="form-label">Straße &amp; Hausnummer *</label>
           <input type="text" class="form-control" id="adresse" name="adresse" required>
         </div>
         <div class="col-md-6">
-          <label for="plz" class="form-label">Postleitzahl &amp; Ort</label>
+          <label for="plz" class="form-label">Postleitzahl &amp; Ort *</label>
           <input type="text" class="form-control" id="plz" name="plz" required>
         </div>
         <div class="col-md-6">
-          <label for="telefon" class="form-label">Telefon</label>
+          <label for="telefon" class="form-label">Telefon *</label>
           <input type="tel" class="form-control" id="telefon" name="telefon" required>
         </div>
         <div class="col-md-6">
-          <label for="email" class="form-label">E-Mail</label>
+          <label for="email" class="form-label">E-Mail *</label>
           <input type="email" class="form-control" id="email" name="email" required>
         </div>
         <div class="col-12">
@@ -216,7 +216,7 @@
       };
 
       const serviceID = 'service_c9oy6ke'; // <--- hier ersetzen
-      const templateID = 'template_hm18taw'; // <--- hier ersetzen
+      const templateID = 'template_gk7aaos'; // <--- hier ersetzen
 
       emailjs.send(serviceID, templateID, templateParams)
         .then(() => {
@@ -234,6 +234,4 @@
         });
   </script>
 </body>
-
-
 </html>
