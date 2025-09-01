@@ -49,6 +49,10 @@
         padding: 20px;
       }
     }
+    .form-check-input:checked {
+      background-color: #9DD3D0;
+      border-color: #69A6A9;
+    }
   </style>
 </head>
 <body>
@@ -221,7 +225,7 @@
       emailjs.send(serviceID, templateID, templateParams)
         .then(() => {
             btn.innerText = 'Absenden';
-            statusDiv.innerHTML = '<div class="alert alert-success">Anfrage erfolgreich gesendet!</div>';
+            statusDiv.innerHTML = '<div class="alert alert-success">Vielen Dank für die Anfrage, wir melden uns in den nächsen 24 Stunden bei Ihnen.</div>';
             form.reset();
 
             form.reset();
