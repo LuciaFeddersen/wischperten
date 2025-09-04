@@ -313,13 +313,11 @@
     <script>
       // Logik: Wenn "Berlin komplett" gewählt wird -> alle Bezirke auswählen
       document.getElementById('berlinKomplett').addEventListener('change', function() {
-        const checkboxes = document.querySelectorAll('#einsatzorte input[type="checkbox"]');
-        checkboxes.forEach(cb => {
-          if (cb !== this && cb.id !== "eo-brandenburg") {
-            cb.checked = this.checked;
-          }
-        });
-      });
+          const berlinCheckboxes = document.querySelectorAll('#einsatzorte input.berlin');
+          berlinCheckboxes.forEach(cb => {
+              cb.checked = this.checked;
+          });
+      }); 
       </script>
       <script>
         document.getElementById('berlinKomplett').addEventListener('change', function() {
