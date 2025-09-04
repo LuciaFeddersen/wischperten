@@ -62,6 +62,17 @@
       .form-check-datschenschutz {
         float: none !important;
       }
+      .subheading { 
+        font-weight: bold; 
+        color: #30585C; 
+        margin-top: 10px; 
+        margin-bottom: 4px;
+      }
+      .pflicht-hinweis { 
+        font-size: 0.9rem; 
+        color: #666;
+        margin-top: 10px; 
+      }
     </style>
 </head>
 <body class="subcontractor">
@@ -146,9 +157,9 @@
             <div class="col-md-6">
               <label for="firma" class="form-label">Firma *</label>
               <input type="text" class="form-control" id="firma" name="firma" required>
-            </div>
+            </div> 
             <div class="col-md-6">
-              <label for="ansprechpartner" class="form-label">Ansprechpartner *</label>
+              <label for="ansprechpartner" class="form-label">Ansprechpartner(Vorname, Nachname) *</label>
               <input type="text" class="form-control" id="ansprechpartner" name="ansprechpartner" required>
             </div>
             <div class="col-md-6">
@@ -198,78 +209,58 @@
                       <input class="form-check-input" type="checkbox" name="dienstleistungen" value="Hotelreinigung" id="dl-hotel">
                       <label class="form-check-label" for="dl-hotel">Hotelreinigung</label>
                     </div>
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" name="dienstleistungen" value="sonstiges" id="dl-sonstiges">
+                      <label class="form-check-label" for="dl-sonstiges">sonstiges</label>
+                    </div>
+                    <div id="sonstiges-input" class="mt-2" style="margin-left: 1.8rem;">
+                      <input type="text" class="form-control" name="sonstiges_text" placeholder="sonstiges">
+                    </div>
                   </div>
                 </div>
               </div>
-
+              
               <!-- Einsatzorte -->
               <div class="col-md-6 mb-3">
                 <label class="form-label">Einsatzorte *</label>
                 <div class="form-control p-3" style="height: auto;">
                   <div id="einsatzorte" class="form-check-list">
+                    
+                    <!-- Berlin -->
+                    <div class="subheading">Berlin</div>
                     <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="einsatzorte" value="Berlin komplett" id="berlinKomplett">
+                      <input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Berlin komplett" id="berlinKomplett">
                       <label class="form-check-label" for="berlinKomplett">Berlin komplett</label>
                     </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="einsatzorte" value="Charlottenburg-Wilmersdorf" id="eo-charlottenburg">
-                      <label class="form-check-label" for="eo-charlottenburg">Charlottenburg-Wilmersdorf</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="einsatzorte" value="Friedrichshain-Kreuzberg" id="eo-fhain">
-                      <label class="form-check-label" for="eo-fhain">Friedrichshain-Kreuzberg</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="einsatzorte" value="Lichtenberg" id="eo-lichtenberg">
-                      <label class="form-check-label" for="eo-lichtenberg">Lichtenberg</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="einsatzorte" value="Marzahn-Hellersdorf" id="eo-marzahn">
-                      <label class="form-check-label" for="eo-marzahn">Marzahn-Hellersdorf</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="einsatzorte" value="Mitte" id="eo-mitte">
-                      <label class="form-check-label" for="eo-mitte">Mitte</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="einsatzorte" value="Neukölln" id="eo-neukoelln">
-                      <label class="form-check-label" for="eo-neukoelln">Neukölln</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="einsatzorte" value="Pankow" id="eo-pankow">
-                      <label class="form-check-label" for="eo-pankow">Pankow</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="einsatzorte" value="Reinickendorf" id="eo-reinickendorf">
-                      <label class="form-check-label" for="eo-reinickendorf">Reinickendorf</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="einsatzorte" value="Spandau" id="eo-spandau">
-                      <label class="form-check-label" for="eo-spandau">Spandau</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="einsatzorte" value="Steglitz-Zehlendorf" id="eo-steglitz">
-                      <label class="form-check-label" for="eo-steglitz">Steglitz-Zehlendorf</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="einsatzorte" value="Tempelhof-Schöneberg" id="eo-tempelhof">
-                      <label class="form-check-label" for="eo-tempelhof">Tempelhof-Schöneberg</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" name="einsatzorte" value="Treptow-Köpenick" id="eo-treptow">
-                      <label class="form-check-label" for="eo-treptow">Treptow-Köpenick</label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" id="eo-brandenburg" name="einsatzorte" value="Brandenburg">
-                      <label class="form-check-label" for="eo-brandenburg">Brandenburg</label>
-                    </div>
-                    <div id="brandenburg-input" class="mt-2" style="display: none; margin-left: 1.8rem;">
-                      <input type="text" class="form-control" name="brandenburg_text" placeholder="Region z.B. Potsdam, Oranienburg...">
+                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Charlottenburg-Wilmersdorf" id="eo-charlottenburg"><label class="form-check-label" for="eo-charlottenburg">Charlottenburg-Wilmersdorf</label></div>
+                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Friedrichshain-Kreuzberg" id="eo-fhain"><label class="form-check-label" for="eo-fhain">Friedrichshain-Kreuzberg</label></div>
+                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Lichtenberg" id="eo-lichtenberg"><label class="form-check-label" for="eo-lichtenberg">Lichtenberg</label></div>
+                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Marzahn-Hellersdorf" id="eo-marzahn"><label class="form-check-label" for="eo-marzahn">Marzahn-Hellersdorf</label></div>
+                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Mitte" id="eo-mitte"><label class="form-check-label" for="eo-mitte">Mitte</label></div>
+                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Neukölln" id="eo-neukoelln"><label class="form-check-label" for="eo-neukoelln">Neukölln</label></div>
+                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Pankow" id="eo-pankow"><label class="form-check-label" for="eo-pankow">Pankow</label></div>
+                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Reinickendorf" id="eo-reinickendorf"><label class="form-check-label" for="eo-reinickendorf">Reinickendorf</label></div>
+                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Spandau" id="eo-spandau"><label class="form-check-label" for="eo-spandau">Spandau</label></div>
+                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Steglitz-Zehlendorf" id="eo-steglitz"><label class="form-check-label" for="eo-steglitz">Steglitz-Zehlendorf</label></div>
+                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Tempelhof-Schöneberg" id="eo-tempelhof"><label class="form-check-label" for="eo-tempelhof">Tempelhof-Schöneberg</label></div>
+                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Treptow-Köpenick" id="eo-treptow"><label class="form-check-label" for="eo-treptow">Treptow-Köpenick</label></div>
+
+                    <!-- Brandenburg -->
+                    <div class="subheading">Brandenburg</div>
+                    <div class="form-check"><input class="form-check-input brandenburg" type="checkbox" id="eo-brandenburgAnDerHavel" name="einsatzorte" value="Brandenburg an der Havel + 10km"><label class="form-check-label" for="eo-brandenburgAnDerHavel">Brandenburg an der Havel + 10km</label></div>
+                    <div class="form-check"><input class="form-check-input brandenburg" type="checkbox" id="eo-potsdam" name="einsatzorte" value="Potsdam + 10km"><label class="form-check-label" for="eo-potsdam">Potsdam + 10km</label></div>
+                    <div class="form-check"><input class="form-check-input brandenburg" type="checkbox" id="eo-nauen" name="einsatzorte" value="Nauen + 10km"><label class="form-check-label" for="eo-nauen">Nauen + 10km</label></div>
+                    <div class="form-check"><input class="form-check-input brandenburg" type="checkbox" id="eo-oranienburg" name="einsatzorte" value="Oranienburg + 10km"><label class="form-check-label" for="eo-oranienburg">Oranienburg + 10km</label></div>
+                    <div class="form-check"><input class="form-check-input brandenburg" type="checkbox" id="eo-strausberg" name="einsatzorte" value="Strausberg + 10km"><label class="form-check-label" for="eo-strausberg">Strausberg + 10km</label></div>
+                    <div class="form-check"><input class="form-check-input brandenburg" type="checkbox" id="eo-frankfurtOder" name="einsatzorte" value="Frankfurt (Oder) + 10km"><label class="form-check-label" for="eo-frankfurtOder">Frankfurt (Oder) + 10km</label></div>
+                    <div class="form-check"><input class="form-check-input brandenburg" type="checkbox" id="eo-königsWusterhausen" name="einsatzorte" value="Königs Wusterhausen + 10km"><label class="form-check-label" for="eo-königsWusterhausen">Königs Wusterhausen + 10km</label></div>
+                    <div class="form-check"><input class="form-check-input brandenburg" type="checkbox" id="eo-brandenburg" name="einsatzorte" value="andere Orte in Brandenburg"><label class="form-check-label" for="eo-brandenburg">andere Orte in Brandenburg</label></div>
+                    <div id="brandenburg-input" class="mt-2" style="margin-left: 1.8rem;">
+                      <input type="text" class="form-control" name="brandenburg_text" placeholder="Region in Brandenburg">
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
 
           <div class="col-12">
             <label for="leistungen" class="form-label">Referenzen</label>
@@ -282,6 +273,7 @@
               Ich akzeptiere die <a href="datenschutz.html" class="small text-decoration-none">Datenschutzbestimmungen</a>.
             </label>
           </div>
+          <div class="pflicht-hinweis">* Pflichtfeld</div>
           <div class="col-12 text-center">
             <button type="submit" id="btnSubmit" class="btn btn-primary mt-3">Absenden</button>
           </div>
@@ -328,22 +320,19 @@
           }
         });
       });
-      document.getElementById('eo-brandenburg').addEventListener('change', function() {
-        const input = document.getElementById('brandenburg-input');
-        if (this.checked) {
-          input.style.display = 'block';
-        } else {
-          input.style.display = 'none';
-        }
-      });
       </script>
       <script>
+        document.getElementById('berlinKomplett').addEventListener('change', function() {
+          const checkboxes = document.querySelectorAll('#einsatzorte input[type="checkbox"].berlin');
+          checkboxes.forEach(cb => { cb.checked = this.checked; });
+        });
+
         const form = document.getElementById('subForm');
         const btn = document.getElementById('btnSubmit');
         const statusDiv = document.getElementById('status');
 
-        function getCheckedValues(name) {
-          const checkboxes = document.querySelectorAll(`input[name="${name}"]:checked`);
+        function getCheckedValues(selector) {
+          const checkboxes = document.querySelectorAll(selector + ':checked');
           return Array.from(checkboxes).map(cb => cb.value);
         }
 
@@ -358,14 +347,21 @@
 
           btn.innerText = 'Sending...';
 
+          const sonstiges = document.querySelector('[name="sonstiges_text"]').value || "";
+          const brandenburg = document.querySelector('[name="brandenburg_text"]').value || "";
+
+          // Berlin & Brandenburg separat sammeln
+          const berlinOrte = getCheckedValues('#einsatzorte input.berlin');
+          const brandenburgOrte = getCheckedValues('#einsatzorte input.brandenburg');
+
           const templateParams = {
             firma: document.getElementById('firma').value,
             ansprechpartner: document.getElementById('ansprechpartner').value,
             telefon: document.getElementById('telefon').value,
             email: document.getElementById('email').value,
-            dienstleistungen: getCheckedValues('dienstleistungen').join(", "),
-            einsatzorte: getCheckedValues('einsatzorte').join(", "),
-            brandenburg: document.querySelector('[name="brandenburg_text"]').value || "",
+            dienstleistungen: (getCheckedValues('#dienstleistungen input').join(", ") + (sonstiges ? ", " + sonstiges : "")),
+            berlin: berlinOrte.join(", "),
+            brandenburg: (brandenburgOrte.join(", ") + (brandenburg ? ", " + brandenburg : "")),
             referenzen: document.getElementById('leistungen').value,
           };
 
@@ -385,7 +381,6 @@
               console.error(err);
             });
         });
-
-    </script>
+      </script>
 </body>
 </html>
