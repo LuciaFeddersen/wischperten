@@ -11,9 +11,7 @@
     <link rel="stylesheet" type="text/css" href="../css/style.css">
 
     <style>
-       * {
-        max-width: 100%;
-      }
+      /* Grundlegendes Styling */
       .form-container {
         background-color: #ffffff;
         border-radius: 15px;
@@ -32,51 +30,57 @@
         border-color: #30585C;
       }
       label {
-        font-weight: 600;
         color: #30585C;
       }
       .form-control:focus {
         border-color: #69A6A9;
         box-shadow: 0 0 5px rgba(105, 166, 169, 0.5);
       }
+
+      /* Checkbox Styling */
+      .form-check {
+        display: flex;
+        align-items: flex-start;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .form-check-input {
+        min-width: 1rem;
+        min-width: 1rem;
+        max-height: 1rem;
+        max-height: 1rem;
+        margin-top: 0.2rem;
+      }
+
+      .form-check-label {
+        line-height: 1.4;
+        margin-left: 0;
+      }
+
+      /* Unterüberschriften für Bereiche */
+      .subheading {
+        font-weight: bold;
+        color: #30585C;
+        margin-top: 10px;
+        margin-bottom: 4px;
+      }
+
+      /* Textinput für "Sonstiges" und "Brandenburg" */
+      #sonstiges-input, #brandenburg-input {
+          margin-left: 1.8rem;
+          margin-top: 0.3rem;
+      }
+
+      /* Mobile Anpassung */
       @media (max-width: 768px) {
         .form-container {
           padding: 20px;
         }
-      }
-      .form-check-label {
-        color: #30585C; 
-        margin-left: 4px;
-        float: left;
-      }
-      .form-check-label-datenschutz {
-        color: #30585C; 
-        margin-left: 4px;
-      }
-      .form-check-input:checked {
-        background-color: #9DD3D0;
-        border-color: #69A6A9;
-      }
-      .form-label {
-        margin-bottom: 0.5rem; 
-        font-weight: 600;
-      }
-      .row {
-        margin-top: 1rem;
-      }
-      .form-check-datschenschutz {
-        float: none !important;
-      }
-      .subheading { 
-        font-weight: bold; 
-        color: #30585C; 
-        margin-top: 10px; 
-        margin-bottom: 4px;
-      }
-      .pflicht-hinweis { 
-        font-size: 0.9rem; 
-        color: #666;
-        margin-top: 10px; 
+        .form-check-label {
+          
+          text-align: left;
+        }
       }
     </style>
 </head>
@@ -237,17 +241,17 @@
                       <input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Berlin komplett" id="berlinKomplett">
                       <label class="form-check-label" for="berlinKomplett">Berlin komplett</label>
                     </div>
-                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Charlottenburg-Wilmersdorf" id="eo-charlottenburg"><label class="form-check-label" for="eo-charlottenburg">Charlottenburg-Wilmersdorf</label></div>
-                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Friedrichshain-Kreuzberg" id="eo-fhain"><label class="form-check-label" for="eo-fhain">Friedrichshain-Kreuzberg</label></div>
+                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Charlottenburg-Wilmersdorf" id="eo-charlottenburg"><label class="form-check-label" for="eo-charlottenburg">Charlottenburg - Wilmersdorf</label></div>
+                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Friedrichshain-Kreuzberg" id="eo-fhain"><label class="form-check-label" for="eo-fhain">Friedrichshain - Kreuzberg</label></div>
                     <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Lichtenberg" id="eo-lichtenberg"><label class="form-check-label" for="eo-lichtenberg">Lichtenberg</label></div>
-                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Marzahn-Hellersdorf" id="eo-marzahn"><label class="form-check-label" for="eo-marzahn">Marzahn-Hellersdorf</label></div>
+                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Marzahn-Hellersdorf" id="eo-marzahn"><label class="form-check-label" for="eo-marzahn">Marzahn - Hellersdorf</label></div>
                     <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Mitte" id="eo-mitte"><label class="form-check-label" for="eo-mitte">Mitte</label></div>
                     <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Neukölln" id="eo-neukoelln"><label class="form-check-label" for="eo-neukoelln">Neukölln</label></div>
                     <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Pankow" id="eo-pankow"><label class="form-check-label" for="eo-pankow">Pankow</label></div>
                     <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Reinickendorf" id="eo-reinickendorf"><label class="form-check-label" for="eo-reinickendorf">Reinickendorf</label></div>
                     <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Spandau" id="eo-spandau"><label class="form-check-label" for="eo-spandau">Spandau</label></div>
-                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Steglitz-Zehlendorf" id="eo-steglitz"><label class="form-check-label" for="eo-steglitz">Steglitz-Zehlendorf</label></div>
-                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Tempelhof-Schöneberg" id="eo-tempelhof"><label class="form-check-label" for="eo-tempelhof">Tempelhof-Schöneberg</label></div>
+                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Steglitz-Zehlendorf" id="eo-steglitz"><label class="form-check-label" for="eo-steglitz">Steglitz - Zehlendorf</label></div>
+                    <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Tempelhof-Schöneberg" id="eo-tempelhof"><label class="form-check-label" for="eo-tempelhof">Tempelhof - Schöneberg</label></div>
                     <div class="form-check"><input class="form-check-input berlin" type="checkbox" name="einsatzorte" value="Treptow-Köpenick" id="eo-treptow"><label class="form-check-label" for="eo-treptow">Treptow-Köpenick</label></div>
 
                     <!-- Brandenburg -->
