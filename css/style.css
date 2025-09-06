@@ -138,6 +138,10 @@ header h1 {
     .profile {
         max-width: 400px;
     }
+
+    .display-4 {
+      text-align: unset;
+    }
 }
 
 /* Desktop */
@@ -145,12 +149,20 @@ header h1 {
     .profile {
         max-width: 500px;
     }
+
+    .display-4 {
+      text-align: unset;
+    }
 }
 
 /* Sehr große Monitore */
 @media (min-width: 1600px) {
     .profile {
         max-width: 600px;
+    }
+
+    .display-4 {
+      text-align: unset;
     }
 }
 
@@ -324,6 +336,8 @@ hr.divider-light {
 
 .aboutpage {
   background-color: white;
+  text-align: center;
+  
   header {
     background-color: #004d4d;
     color: white;
