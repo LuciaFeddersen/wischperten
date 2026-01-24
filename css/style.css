@@ -422,3 +422,29 @@ hr.divider-light {
       color: white;
       }
   }
+
+
+  /* Wartungs-Overlay */
+#maintenance-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background-color: #000; /* fallback */
+    z-index: 99999;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    pointer-events: all;
+}
+
+/* Bild skaliert sauber auf Bildschirm */
+#maintenance-overlay img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
