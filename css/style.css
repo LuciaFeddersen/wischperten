@@ -117,9 +117,15 @@ header h1 {
 }
 
 .fullscreen-header {
-    height: 100vh;
+    height: 90vh;
     display: flex;
     align-items: center;
+}
+
+@media (max-width: 991.98px) {
+    .fullscreen-header {
+        padding-top: 50px;
+    }
 }
 
 .profile {
