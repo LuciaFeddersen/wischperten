@@ -5,6 +5,16 @@ dunkler=  #69A6A9
 schrift= #30585C
 */
 
+:root {
+  --navbar-height: 0px;
+}
+
+@media (max-width: 576px) {
+  :root {
+    --navbar-height: 50px;
+  }
+}
+
 img, video, iframe {
   max-width: 100%;
   height: auto;
@@ -20,6 +30,12 @@ body {
     padding-top: 4.5rem;
     height: 100%;
     color: #30585C;
+}
+
+@media (max-width: 991.98px) {
+    body {
+        padding-top: 72px;
+    }
 }
 
 header h1 {
@@ -63,6 +79,10 @@ header h1 {
 
 .active {
   color: #30585C !important;
+}
+
+.navbar {
+  height: 85px;
 }
 
 /* Dropdown on hover in Desktop */
@@ -120,6 +140,19 @@ header h1 {
     height: 90vh;
     display: flex;
     align-items: center;
+    padding-top: var(--navbar-height);
+}
+
+.about-image {
+  max-width: 100%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 1rem !important;
+}
+
+@media (min-width: 992px) {
+  .about-image {
+    max-width: 95%;
+  }
 }
 
 .profile {
@@ -189,19 +222,6 @@ header h1 {
   border: none;
   border-radius: 10rem;
 }
-
-.about-image {
-  max-width: 100%;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-  border-radius: 1rem !important;
-}
-
-@media (min-width: 992px) {
-  .about-image {
-    max-width: 95%;
-  }
-}
-
 
 /* home service */
 
