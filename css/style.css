@@ -190,6 +190,19 @@ header h1 {
   border-radius: 10rem;
 }
 
+.about-image {
+  max-width: 100%;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  border-radius: 1rem !important;
+}
+
+@media (min-width: 992px) {
+  .about-image {
+    max-width: 95%;
+  }
+}
+
+
 /* home service */
 
 hr.divider {
